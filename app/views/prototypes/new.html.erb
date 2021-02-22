@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">新規プロトタイプ投稿</h2>
+        <%# 部分テンプレートでフォームを表示する %>
+        <%#  locals: { prototype: @prototype }は、コントローラーのnewアクションのインスタンス変数の@prototypeを,
+        prototypeに代入する。そして、代入されたprototypeは、部分テンプレートのform内で使用される。%>
+        <%= render partial: "form", locals: { prototype: @prototype } %>
+    </div>
+  </div>
+</div>

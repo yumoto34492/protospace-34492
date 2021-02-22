@@ -1,0 +1,12 @@
+<div class="card">
+  <%= link_to image_tag(prototype.image, class: :card__img), prototype_path(prototype.id), method: :get %>
+  <div class="card__body">
+    <%= link_to prototype.title, prototype_path(prototype.id), method: :get, class: :card__title %>
+    <p class="card__summary">
+      <%= prototype.catch_copy %>
+    </p>
+    <%# prototypeとアソシエーションしているuserのnameカラム情報が表示される %>
+    <%# URLは、prototypeとアソシエーションしているuserのid番号で詳細ページは遷移する %>
+    <%= link_to "by#{prototype.user.name}", "/users/#{prototype.user.id}", class: :card__user %>
+  </div>
+</div>
